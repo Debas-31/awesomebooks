@@ -18,6 +18,7 @@ const addBook = () => {
   }
 };
 
+// eslint-disable-next-line no-unused-vars
 function removeBook(id) {
     const booksData = localStorage.getItem('booksData');
     const convertedBooks = JSON.parse(booksData);
