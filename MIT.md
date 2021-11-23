@@ -1,5 +1,5 @@
-## Copyright 2021, []
-###### My-first-capstone : Expo Book Fair
+## Copyright 2021, [Rodo-dbus]
+###### project : Awesome Books
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this [] and associated documentation files, to deal in the [] without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [], and to permit persons to whom the [] is furnished to do so, subject to the following conditions:
 

@@ -39,8 +39,8 @@ const displayBooks = () => {
     let html = '';
     convertedBooks.forEach((book) => {
       html += `<article>
-     <h2>${book.title}</h2>
-     <h2>${book.author}</h2>
+     <h4>${book.title}</h4>
+     <h4>${book.author}</h4>
      <button data-book-id = "${book.id}" id = "remove-button" onclick="removeBook(${book.id})">Remove</button>
    </article></br><hr>`;
     });
@@ -48,7 +48,7 @@ const displayBooks = () => {
   }
 };
 
-window.addEventListener('load', displayBooks);
+window.addEventListener('DOMContentLoaded', displayBooks);
 
 document.getElementById('addbook').addEventListener('click', addBook);
 
