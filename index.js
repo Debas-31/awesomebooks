@@ -1,10 +1,11 @@
 let tempBooks = [];
-  class Book {
-    constructor(title, author, id){
-      this.title = title;
-      this.author = author;
-      this.id = id;
-    }
+class Book {
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
+
     addBook = () => {
       const title = document.getElementById('title').value;
       const author = document.getElementById('author').value;
@@ -42,7 +43,7 @@ let tempBooks = [];
         document.getElementById('bookslist').innerHTML = html;
       }
     };
-  }
+}
 
 // eslint-disable-next-line no-unused-vars
 const removeBook = (id) => {
@@ -52,7 +53,7 @@ const removeBook = (id) => {
   const removedBooks = JSON.stringify(remainingBooks);
   localStorage.setItem('booksData', removedBooks);
   window.location.reload();
-}
+};
 
 document.getElementById('addbook').addEventListener('click', () => {
   const book = new Book();
