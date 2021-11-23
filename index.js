@@ -51,5 +51,3 @@ const displayBooks = () => {
 window.addEventListener('DOMContentLoaded', displayBooks);
 
 document.getElementById('addbook').addEventListener('click', addBook);
-
-document.getElementById('removebook').addEventListener('click', removeBook);
