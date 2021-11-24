@@ -34,8 +34,7 @@ class Book {
         let html = '';
         convertedBooks.forEach((book) => {
           html += `<article>
-          <h4>${book.title}</h4>
-          <h4>${book.author}</h4>
+          <span>${book.title} by ${book.author}<span>
           <button data-book-id = "${book.id}" id = "remove-button" onclick="removeBook(${book.id})">Remove</button>
           </article></br><hr>`;
         });
