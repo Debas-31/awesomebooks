@@ -33,9 +33,9 @@ class Book {
         document.getElementById('bookstatus').innerHTML = '';
         let html = '';
         convertedBooks.forEach((book) => {
-          html += `<article>
-          <span>${book.title} by ${book.author}<span>
-          <button data-book-id = "${book.id}" id = "remove-button" onclick="removeBook(${book.id})">Remove</button>
+          html += `<article class = "article-container">
+          <p class = "title">${book.title} by ${book.author}</p>
+          <button class = "book-remove" data-book-id = "${book.id}" id = "remove-button" onclick="removeBook(${book.id})">Remove</button>
           </article></br><hr>`;
         });
         document.getElementById('bookslist').innerHTML = html;
