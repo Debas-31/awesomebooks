@@ -10,13 +10,13 @@ class Book {
       const title = document.getElementById('title').value;
       const author = document.getElementById('author').value;
       const book = { id: new Date().getTime(), title, author };
-      if (localStorage.getItem('booksData') !== null) {
-        tempBooks = JSON.parse(localStorage.getItem('booksData'));
+      if (localStorage.getItem('booksData') == null) {
         tempBooks.push(book);
         const convertedBooks = JSON.stringify(tempBooks);
         localStorage.setItem('booksData', convertedBooks);
         window.location.reload();
       } else {
+        tempBooks = JSON.parse(localStorage.getItem('booksData'));
         tempBooks.push(book);
         const convertedBooks = JSON.stringify(tempBooks);
         localStorage.setItem('booksData', convertedBooks);
@@ -25,10 +25,9 @@ class Book {
     };
 
     displayBooks = () => {
-      const booksData = localStorage.getItem('booksData');
-      const convertedBooks = JSON.parse(booksData);
-      document.getElementById('bookstatus').innerHTML = 'No books added';
-      if (convertedBooks && convertedBooks.length === 0) {
+    const booksData = localStorage.getItem('booksData');
+    const convertedBooks = JSON.parse(booksData);
+      if (convertedBooks == null) {
         document.getElementById('bookstatus').innerHTML = 'No books added';
       } else {
         document.getElementById('bookstatus').innerHTML = '';
