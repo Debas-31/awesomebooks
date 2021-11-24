@@ -25,8 +25,8 @@ class Book {
     };
 
     displayBooks = () => {
-    const booksData = localStorage.getItem('booksData');
-    const convertedBooks = JSON.parse(booksData);
+      const booksData = localStorage.getItem('booksData');
+      const convertedBooks = JSON.parse(booksData);
       if (convertedBooks == null) {
         document.getElementById('bookstatus').innerHTML = 'No books added';
       } else {
