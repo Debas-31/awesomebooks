@@ -3,3 +3,82 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.logo {
+  text-align: center;
+  padding: 15px;
+}
+
+.book-form-container {
+  text-align: center;
+}
+
+#addbook {
+  padding: 5px 15px;
+  border: 1px solid;
+  box-shadow: 2px 3px;
+  margin-left: 30rem;
+}
+
+.input {
+  padding: 7px 0;
+  width: 40%;
+}
+
+.subtitle::before {
+  display: block;
+  height: 2px;
+  background-color: rgb(29, 28, 28);
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.subtitle {
+  font-size: 25px;
+  padding-bottom: 15px;
+}
+
+.books-container {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid;
+  margin: 0 auto;
+  padding: 5px 5px;
+}
+
+.book-remove {
+  border: 1px solid;
+  padding: 5px 10px;
+  box-shadow: 2px 3px;
+}
+
+.article-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 7px;
+}
+
+.article-container:nth-child(even) {
+  background-color: rgb(221, 220, 220);
+}
+
+.article-container:nth-child(odd) {
+  background-color: rgb(250, 249, 249);
+}
