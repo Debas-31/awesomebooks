@@ -2,7 +2,7 @@
 
 # AWESOME BOOKS
 
-> Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list.
+> Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list. In order to achieve this project we rewrote some of our function definitions into class expressions to apply JavaScript best practices
 
 
 ### ScreenShoot
@@ -13,7 +13,7 @@
 
 - HTML
 - CSS 
-- JavaScript
+- JavaScript Classes
 - Stylelint, Github Actions
 
 ## Live Demo
@@ -36,8 +36,6 @@ To get a local copy up and running follow these simple example steps.
 
 ```bash 
 git clone git@github.com:Debas-31/awesomebooks.git
-
-
 ```
 
 - Install Dependencies
