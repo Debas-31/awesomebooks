@@ -2,11 +2,11 @@
 
 # AWESOME BOOKS
 
-> Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list. In order to achieve this project we rewrote some of our function definitions into class expressions to apply JavaScript best practices
+> Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list. In order to achieve this project we rewrote some of our function definitions into class expressions to apply JavaScript best practices and styling the core elements.
 
 
 ### ScreenShoot
-![screenshot](./image/screenShoot-awesomeBooks.png)
+![screenshot](./image/ScreenShot-milestone-3.png)
 
 
 ## Built With
@@ -14,7 +14,8 @@
 - HTML
 - CSS 
 - JavaScript Classes
-- Stylelint, Github Actions
+- Linters
+- Vscode
 
 ## Live Demo
 

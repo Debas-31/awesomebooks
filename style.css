@@ -44,6 +44,7 @@
   margin-bottom: 15px;
   margin-top: 20px;
 }
+
 .subtitle {
   font-size: 25px;
   padding-bottom: 15px;
@@ -77,7 +78,7 @@
 .article-container:nth-child(even) {
   background-color: rgb(221, 220, 220);
 }
+
 .article-container:nth-child(odd) {
   background-color: rgb(250, 249, 249);
 }
-
