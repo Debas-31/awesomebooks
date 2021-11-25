@@ -53,6 +53,7 @@ const removeBook = (id) => {
   window.location.reload();
 };
 
+
 document.getElementById('addbook').addEventListener('click', () => {
   const book = new Book();
   book.addBook();
@@ -61,4 +62,6 @@ document.getElementById('addbook').addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
   const book = new Book();
   book.displayBooks();
+  const dateTime  = luxon.DateTime;
+  document.getElementById('date').innerHTML = dateTime.now().toLocaleString(dateTime.DATETIME_FULL);
 });
