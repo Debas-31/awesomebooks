@@ -4,6 +4,27 @@
   box-sizing: border-box;
 }
 
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  border: 1px solid black;
+  margin: 1rem;
+
+}
+
+li{
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -83,3 +104,5 @@
 .article-container:nth-child(odd) {
   background-color: rgb(250, 249, 249);
 }
+
+

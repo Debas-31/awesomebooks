@@ -8,8 +8,20 @@
     <title>Library Book App</title>
   </head>
   <body>
-    <main class="container">
+    <nav class="nav-bar">
       <h1 class="logo">Awesome Books</h1>
+      <ul class="nav-links">
+        <li class="nav-link">List</li>
+        <li><img src="./image/vertical-image.png" alt="vertical image for separating"></li>
+        <li class="nav-link">Add new</li>
+        <li><img src="./image/vertical-image.png" alt="vertical image for separating"></li>
+        <li class="nav-link">Contact</li>
+      </ul>
+    </nav>
+    <div class="date-time">
+      <p class="date"></p>
+    </div>
+    <main class="container">
       <div class="books-container" id="bookslist">
           <p id="bookstatus"></p>
       </div>
@@ -19,6 +31,11 @@
         <input class="input" type="text" placeholder="Author" id="author"/><br><br>
         <button type="button" id="addbook">Add</button>
       </form>
+      <section id="contact" class="contact-section">
+
+      </section>
+
+      <footer></footer>
     </main>
     <script src="index.js"></script>
   </body>
