@@ -14,7 +14,7 @@
 
 }
 
-li{
+.nav-links li{
   list-style: none;
 }
 
@@ -121,4 +121,15 @@ li{
   margin-top: 70px;
   margin-right: 15px;
 }
+
+#date {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.contact-section {
+  margin: 60px auto 0px auto;
+}
+
+
 

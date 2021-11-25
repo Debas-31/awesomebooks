@@ -1,4 +1,5 @@
 let tempBooks = [];
+
 class Book {
   constructor(title, author, id) {
     this.title = title;
@@ -43,6 +44,8 @@ class Book {
     };
 }
 
+
+
 // eslint-disable-next-line no-unused-vars
 const removeBook = (id) => {
   const booksData = localStorage.getItem('booksData');
@@ -62,6 +65,8 @@ document.getElementById('addbook').addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
   const book = new Book();
   book.displayBooks();
-  const { DateTime } = luxon;
-  document.getElementById('date').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
+  const DateTime = luxon.DateTime;
+  const today = DateTime.local();
+  const dateOutput = document.getElementById('date');
+  dateOutput.innerHTML = JSON.stringify(today.setLocale('en-US').toLocaleString(DateTime.DATETIME_MED));
 });
