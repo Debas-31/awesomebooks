@@ -27,7 +27,7 @@ class Book {
     displayBooks = () => {
       const booksData = localStorage.getItem('booksData');
       const convertedBooks = JSON.parse(booksData);
-      if (convertedBooks == null) {
+      if (convertedBooks && convertedBooks.length === 0) {
         document.getElementById('bookstatus').innerHTML = 'No books added';
       } else {
         document.getElementById('bookstatus').innerHTML = '';
@@ -62,6 +62,6 @@ document.getElementById('addbook').addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
   const book = new Book();
   book.displayBooks();
-  const dateTime  = luxon.DateTime;
-  document.getElementById('date').innerHTML = dateTime.now().toLocaleString(dateTime.DATETIME_FULL);
+  const { DateTime } = luxon;
+  document.getElementById('date').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
 });
