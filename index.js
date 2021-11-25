@@ -44,8 +44,6 @@ class Book {
     };
 }
 
-
-
 // eslint-disable-next-line no-unused-vars
 const removeBook = (id) => {
   const booksData = localStorage.getItem('booksData');
@@ -56,17 +54,52 @@ const removeBook = (id) => {
   window.location.reload();
 };
 
-
 document.getElementById('addbook').addEventListener('click', () => {
   const book = new Book();
   book.addBook();
 });
-
+/* global luxon */
+/* eslint no-undef: "error" */
 window.addEventListener('DOMContentLoaded', () => {
   const book = new Book();
   book.displayBooks();
-  const DateTime = luxon.DateTime;
+  const { DateTime } = luxon;
   const today = DateTime.local();
   const dateOutput = document.getElementById('date');
   dateOutput.innerHTML = JSON.stringify(today.setLocale('en-US').toLocaleString(DateTime.DATETIME_MED));
 });
+
+const booksContainer = document.querySelector('.books-container');
+const booksForm = document.querySelector('.book-form-container');
+const contact = document.querySelector('.contact-section');
+const idList = document.querySelector('#id-list');
+const idAdd = document.querySelector('#id-add');
+const idContact = document.querySelector('#id-contact');
+
+// For book container
+function openBooksContainer() {
+  booksContainer.style.display = 'flex';
+  booksForm.style.display = 'none';
+  contact.style.display = 'none';
+}
+
+idList.addEventListener('click', openBooksContainer);
+
+// For add book
+
+function addBookFor() {
+  booksContainer.style = 'none';
+  booksForm.style.display = 'block';
+  contact.style.display = 'none';
+}
+
+idAdd.addEventListener('click', addBookFor);
+
+// For contact section
+
+function openContact() {
+  booksContainer.style.display = 'none';
+  booksForm.style.display = 'none';
+  contact.style.display = 'block';
+}
+idContact.addEventListener('click', openContact);

@@ -11,10 +11,9 @@
   padding-right: 30px;
   border: 1px solid black;
   margin: 1rem;
-
 }
 
-.nav-links li{
+.nav-links li {
   list-style: none;
 }
 
@@ -22,7 +21,6 @@
   display: flex;
   gap: 1.2rem;
   align-items: center;
-
 }
 
 .container {
@@ -41,6 +39,7 @@
 
 .book-form-container {
   text-align: center;
+  display: none;
 }
 
 #bookstatus {
@@ -79,7 +78,7 @@
 
 .books-container {
   width: 60%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -110,10 +109,9 @@
   background-color: rgb(250, 249, 249);
 }
 
-.copyright-footer p{
+.copyright-footer p {
   border: 1px solid black;
   margin: 1rem;
-  
   padding: 20px;
 }
 
@@ -128,8 +126,21 @@
 }
 
 .contact-section {
-  margin: 60px auto 0px auto;
+  /* display: none; */
+  margin: 10px auto 0 auto;
 }
 
+.contact-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
 
+.contact-section h4 {
+  padding: 0.3rem 0;
+  font-size: 1.6rem;
+}
 
+.contact-list li {
+  padding: 0.3rem 0;
+  font-size: 1.4rem;
+}
