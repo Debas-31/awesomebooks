@@ -1,4 +1,5 @@
 let tempBooks = [];
+
 class Book {
   constructor(title, author, id) {
     this.title = title;
@@ -27,7 +28,7 @@ class Book {
     displayBooks = () => {
       const booksData = localStorage.getItem('booksData');
       const convertedBooks = JSON.parse(booksData);
-      if (convertedBooks == null) {
+      if (convertedBooks && convertedBooks.length === 0) {
         document.getElementById('bookstatus').innerHTML = 'No books added';
       } else {
         document.getElementById('bookstatus').innerHTML = '';
@@ -57,8 +58,48 @@ document.getElementById('addbook').addEventListener('click', () => {
   const book = new Book();
   book.addBook();
 });
-
+/* global luxon */
+/* eslint no-undef: "error" */
 window.addEventListener('DOMContentLoaded', () => {
   const book = new Book();
   book.displayBooks();
+  const { DateTime } = luxon;
+  const today = DateTime.local();
+  const dateOutput = document.getElementById('date');
+  dateOutput.innerHTML = JSON.stringify(today.setLocale('en-US').toLocaleString(DateTime.DATETIME_MED));
 });
+
+const booksContainer = document.querySelector('.books-container');
+const booksForm = document.querySelector('.book-form-container');
+const contact = document.querySelector('.contact-section');
+const idList = document.querySelector('#id-list');
+const idAdd = document.querySelector('#id-add');
+const idContact = document.querySelector('#id-contact');
+
+// For book container
+function openBooksContainer() {
+  booksContainer.style.display = 'flex';
+  booksForm.style.display = 'none';
+  contact.style.display = 'none';
+}
+
+idList.addEventListener('click', openBooksContainer);
+
+// For add book
+
+function addBookFor() {
+  booksContainer.style = 'none';
+  booksForm.style.display = 'block';
+  contact.style.display = 'none';
+}
+
+idAdd.addEventListener('click', addBookFor);
+
+// For contact section
+
+function openContact() {
+  booksContainer.style.display = 'none';
+  booksForm.style.display = 'none';
+  contact.style.display = 'block';
+}
+idContact.addEventListener('click', openContact);

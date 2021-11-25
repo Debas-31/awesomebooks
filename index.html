@@ -8,8 +8,20 @@
     <title>Library Book App</title>
   </head>
   <body>
-    <main class="container">
+    <nav class="nav-bar">
       <h1 class="logo">Awesome Books</h1>
+      <ul class="nav-links">
+        <li id="id-list" class="nav-link">List</li>
+        <li><img src="./image/vertical-image.png" alt="vertical image for separating"></li>
+        <li id="id-add" class="nav-link">Add new</li>
+        <li><img src="./image/vertical-image.png" alt="vertical image for separating"></li>
+        <li id="id-contact" class="nav-link">Contact</li>
+      </ul>
+    </nav>
+    <div class="date-time">
+      <p id="date"></p>
+    </div>
+    <main class="container">
       <div class="books-container" id="bookslist">
           <p id="bookstatus"></p>
       </div>
@@ -19,7 +31,22 @@
         <input class="input" type="text" placeholder="Author" id="author"/><br><br>
         <button type="button" id="addbook">Add</button>
       </form>
+      <section id="contact" class="contact-section">
+        <h2 class="contact-title">Contact Information</h2>
+        <h4>Do you have any questions or you just want to say "Hello"?</h4>
+        <h4>You can reach out to us</h4>
+        <ul class="contact-list">
+          <li>Our e-mail: mail@mail.com</li>
+          <li>Our phone number: 0045973164422</li>
+          <li>Our address: Streetname 22,84503 Street City, Country</li>
+        </ul>
+      </section>
+
+      <footer class="copyright-footer">
+        <div><p>Copyright &nbsp;&nbsp;&nbsp;...</p></div>
+      </footer>
     </main>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js"></script>
   </body>
 </html>
