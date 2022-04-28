@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.nav-link {
+  cursor: pointer;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
