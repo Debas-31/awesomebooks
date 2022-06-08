@@ -13,7 +13,7 @@
 
 - HTML
 - CSS 
-- JavaScript Classes
+- JavaScript
 - Linters
 - Vscode
 
